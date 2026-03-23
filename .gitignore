@@ -7,5 +7,8 @@
 # Node
 node_modules/
 
+# Internal dev docs
+docs/
+
 # Lock files without matching package.json at root
 package-lock.json
