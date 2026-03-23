@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Arrcade
+Comment=Self-hosted software controller built using Flutter
+Exec=arrcade
+Icon=${SNAP}/meta/gui/arrcade.png
+Terminal=false
+Type=Application
+Categories=Utilities;Entertainment;

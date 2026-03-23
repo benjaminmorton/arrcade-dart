@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Node
+node_modules/
+
+# Lock files without matching package.json at root
+package-lock.json

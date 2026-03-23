@@ -1,0 +1,3 @@
+PRODUCT_NAME = Arrcade
+PRODUCT_BUNDLE_IDENTIFIER = app.arrcade.arrcade
+PRODUCT_COPYRIGHT = Copyright © 2023 Jagandeep Brar. All rights reserved.

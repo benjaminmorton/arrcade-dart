@@ -1,0 +1,15 @@
+{
+    "arrcade.AnErrorHasOccurred": "Произошла ошибка",
+    "arrcade.Cancel": "Отмена",
+    "arrcade.ChangeProfiles": "Изменить профили",
+    "arrcade.ComingSoon": "Скоро будет",
+    "arrcade.Dashboard": "Панель управления",
+    "arrcade.GoBack": "Назад",
+    "arrcade.ModuleIsNotEnabled": "{} Не включено",
+    "arrcade.Refresh": "Обновить",
+    "arrcade.ReturnToDashboard": "Вернуться в панель управления",
+    "arrcade.SearchTextBar": "Поиск…",
+    "arrcade.Settings": "Настройки",
+    "arrcade.TryAgain": "Попробуйте снова",
+    "arrcade.Unknown": "Неизвестно"
+}

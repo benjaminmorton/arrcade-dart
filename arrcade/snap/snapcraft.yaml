@@ -1,0 +1,31 @@
+name: arrcade
+version: 11.0.0
+confinement: strict
+base: core22
+# Required but managed manually via Snapcraft dashboard
+summary: summary
+description: description
+slots:
+  dbus-arrcade:
+    interface: dbus
+    bus: session
+    name: app.arrcade.arrcade
+apps:
+  arrcade:
+    command: arrcade
+    extensions:
+    - gnome
+    plugs:
+    - home
+    - network
+    slots:
+    - dbus-arrcade
+parts:
+  zenity:
+    plugin: nil
+    stage-packages:
+    - zenity
+  arrcade:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
