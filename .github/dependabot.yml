@@ -29,8 +29,12 @@ updates:
       interval: "monthly"
     open-pull-requests-limit: 5
     groups:
-      docker:
+      docker-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
+      docker-major:
+        patterns: ["*"]
+        update-types: ["major"]
   - package-ecosystem: "npm"
     directories:
       - "/arrcade"
