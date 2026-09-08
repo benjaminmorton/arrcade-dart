@@ -1,0 +1,61 @@
+# Keeps dependencies current without a flood of pull requests.
+#
+# Monthly, not weekly, and grouped: all the small safe bumps arrive as one
+# pull request, breaking major versions as a separate one. At most five open
+# at a time per repository. Security fixes ignore that limit and arrive as
+# soon as a hole is published.
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directories:
+      - "/arrcade/android"
+      - "/arrcade/ios"
+      - "/arrcade/macos"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      bundler-minor-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      bundler-major:
+        patterns: ["*"]
+        update-types: ["major"]
+  - package-ecosystem: "docker"
+    directories:
+      - "/arrcade"
+      - "/arrcade-notification-service"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      docker:
+        patterns: ["*"]
+  - package-ecosystem: "npm"
+    directories:
+      - "/arrcade"
+      - "/arrcade-cloud-functions/functions"
+      - "/arrcade-notification-service"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      npm-major:
+        patterns: ["*"]
+        update-types: ["major"]
+  - package-ecosystem: "pub"
+    directories:
+      - "/arrcade"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    groups:
+      pub-minor-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      pub-major:
+        patterns: ["*"]
+        update-types: ["major"]
