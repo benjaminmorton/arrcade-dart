@@ -1,9 +1,15 @@
 # Keeps dependencies current without a flood of pull requests.
 #
 # Monthly, not weekly, and grouped: all the small safe bumps arrive as one
-# pull request, breaking major versions as a separate one. At most five open
+# pull request, breaking major versions as a separate one. At most three open
 # at a time per repository. Security fixes ignore that limit and arrive as
 # soon as a hole is published.
+#
+# rebase-strategy is disabled because the default rebases every open pull
+# request whenever main moves, and each rebase starts another CI run. With
+# updates across many repositories that quietly burned through the account's
+# free Actions minutes. A pull request that falls behind main now needs a
+# manual rebase, which for monthly grouped updates almost never comes up.
 version: 2
 updates:
   - package-ecosystem: "bundler"
@@ -13,7 +19,8 @@ updates:
       - "/arrcade/macos"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    rebase-strategy: disabled
     groups:
       bundler-minor-patch:
         patterns: ["*"]
@@ -27,7 +34,8 @@ updates:
       - "/arrcade-notification-service"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    rebase-strategy: disabled
     groups:
       docker-minor-patch:
         patterns: ["*"]
@@ -42,7 +50,8 @@ updates:
       - "/arrcade-notification-service"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    rebase-strategy: disabled
     groups:
       npm-minor-patch:
         patterns: ["*"]
@@ -55,7 +64,8 @@ updates:
       - "/arrcade"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    rebase-strategy: disabled
     groups:
       pub-minor-patch:
         patterns: ["*"]
