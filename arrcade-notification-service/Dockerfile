@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:26-alpine
 LABEL org.opencontainers.image.source="https://github.com/JagandeepBrar/Arrcade-Notification-Service"
 # Install packages, copy data, build project
 WORKDIR /usr/src/app
